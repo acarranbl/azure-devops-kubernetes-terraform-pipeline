@@ -31,6 +31,4 @@ steps:
     command: 'apply'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
     environmentServiceName: 'Azure-rm-sc'
-    providerAzureRmSubscriptionId: '04baf33a-4623-40c7-9c29-06a038af2c98'
     commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
-    allowTelemetryCollection: true
