@@ -14,7 +14,7 @@ steps:
   inputs:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
-    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
+    #commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
     backendType: 'azurerm'
     backendServiceArm: 'Azure-rm-sc'
     backendAzureRmSubscriptionId: '04baf33a-4623-40c7-9c29-06a038af2c98'
@@ -25,7 +25,6 @@ steps:
     backendAzureRmContainerName: 'acbsalablo'
     backendAzureRmKey: 'kubernetes-lab.tfstate'
     allowTelemetryCollection: true
-  displayName: 'Run a one-line script'
 
 - task: TerraformCLI@0
   inputs:
