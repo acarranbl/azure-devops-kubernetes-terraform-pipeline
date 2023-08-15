@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: acarranblazuredevopskubernetesterraformpipeline 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acarranblazuredevopskubernetesterraformpipeline
+  template:
+    metadata:
+      labels:
+        app: acarranblazuredevopskubernetesterraformpipeline 
+    spec:
+      containers:
+        - name: acarranblazuredevopskubernetesterraformpipeline 
+          image: acbcr.azurecr.io/acarranblazuredevopskubernetesterraformpipeline
+          ports:
+          - containerPort: 8080
